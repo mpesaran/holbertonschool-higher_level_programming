@@ -1,0 +1,1 @@
+This projects is about practicing if..else loops and while loops.
