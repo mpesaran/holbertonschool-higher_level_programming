@@ -1,0 +1,1 @@
+This one is to practice dictionaries, lambda and map function.
