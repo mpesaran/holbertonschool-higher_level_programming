@@ -34,18 +34,32 @@ Test:
         ...
     TypeError: a must be an integer
 
+    Missing One Argument
 
-Functions
----------
+    >>> add(5)
+    103
 
-`add_integer(a, b=98)`: Adds two numbers after validating their types.
+     Missing Two Arguments
 
-    Parameters:
-        a (int or float): The first number.
-        b (int or float, optional): The second number. Defaults to 98.
+    >>> add()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
 
-    Returns:
-        int: The sum of `a` and `b` as integers.
+     Float Overflow
 
-    Raises:
-        TypeError: If `a` or `b` is not an integer or a float.
+    Handle float overflow:
+
+    >>> add(1e1000, 2)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+     Float NaN to Integer
+
+    Handle `float('NaN')`:
+
+    >>> add(float('NaN'), 2)
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
