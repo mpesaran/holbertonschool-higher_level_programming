@@ -8,7 +8,7 @@ def add_integer(a, b=98):
         if isinstance(a, float) or isinstance(a, float):
             a = int(a)
             b = int(b)
-        return  a + b
+        return a + b
     except TypeError:
         print("b must be an integer")
     except ValueError:
