@@ -14,6 +14,7 @@ Test:
     3
     >>> add(5.5, -1)
     4
+    Test - b is str
     >>> add(2, "School")
     b must be an integer
     >>> add()
