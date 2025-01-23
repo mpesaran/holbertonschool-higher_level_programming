@@ -1,9 +1,8 @@
-The ``add_integer`` module. This is to test the add funtion.
-"""
-Your module's verbose yet thorough docstring.
-"""
-
+The ``add_integer`` module.
 ======================
+The `add_integer` function ensures that both `a` and `b` are either integers or floats.
+If either value is a float, it will be cast to an integer before performing the addition.
+If the values are not valid types, the function raises a `TypeError` with an appropriate error message.
 
 Using ``add_integer``
 -------------------
@@ -16,13 +15,22 @@ Test:
 
     >>> add(1, 2)
     3
+
     >>> add(5.5, -1)
     4
 
-    Test - b is str
+    Handle invalid types:
+
     >>> add(2, "School")
-    b must be an integer
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Handle missing arguments:
 
     Test - a is none
-    >>> add()
-    a must be an integer
+    >>> add(None)
+     Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    
