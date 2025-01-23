@@ -1,4 +1,8 @@
 The ``add_integer`` module. This is to test the add funtion.
+"""
+Your module's verbose yet thorough docstring.
+"""
+
 ======================
 
 Using ``add_integer``
