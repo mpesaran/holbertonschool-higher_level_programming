@@ -13,7 +13,3 @@ def add_integer(a, b=98):
         print("b must be an integer")
     except ValueError:
         print("a must be an integer")
-
-
-print(add_integer("e",2.2))
-
