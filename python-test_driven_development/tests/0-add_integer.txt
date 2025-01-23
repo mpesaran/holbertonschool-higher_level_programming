@@ -3,7 +3,7 @@ The ``add_integer`` module
 
 Using ``add_integer``
 -------------------
-
+This is to test add function
 First import ``add_integer`` from the ``0-add_integer`` file:
 
     >>> add = __import__('0-add_integer').add_integer
