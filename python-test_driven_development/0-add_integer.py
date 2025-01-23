@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def add_integer(a, b=98):
+    ''' This is to test'''
     try:
         if a is None:
             raise ValueError
