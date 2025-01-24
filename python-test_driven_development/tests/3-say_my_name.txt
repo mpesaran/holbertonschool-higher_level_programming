@@ -19,7 +19,7 @@ Test:
     >>> say_my_name(None)
     Traceback (most recent call last):
     ...
-    TypeError: first_name must be a string
+    TypeError: You have to enter a first name
 
     >>> say_my_name("Jhon", 1)
     Traceback (most recent call last):
