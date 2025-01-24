@@ -7,8 +7,8 @@ prints first name and last name
 def say_my_name(first_name, last_name=""):
     ''' This function is to print out first name and last name'''
     if first_name is None:
-        raise TypeError("first_name must be a string")
-    if not isinstance(first_name, str):
+        raise TypeError("You have to enter a first name")
+    if not isinstance(first_name, str) and first_name is not None:
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
