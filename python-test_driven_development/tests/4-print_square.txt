@@ -32,4 +32,4 @@ Test:
     >>> print_square(None)
     Traceback (most recent call last):
     ...
-    TypeError: size must be an integer
+    TypeError: enter a value for size
