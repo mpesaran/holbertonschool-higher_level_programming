@@ -1,0 +1,31 @@
+The ``text_indentation`` module.
+======================
+
+Using ``text_indentation``
+-------------------
+
+First import ``text_indentation`` from the ``5-text_indentation`` file:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test:
+
+    >>> text_indentation("""How are you? I'm Ok.""")
+    How are you?
+    <BLANKLINE>
+    I'm Ok.
+    <BLANKLINE>
+    <BLANKLINE>
+
+    >>> text_indentation("""How are you""")
+    How are you
+
+    >>> text_indentation([".", "?"])
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text can't be None
