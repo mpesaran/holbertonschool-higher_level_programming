@@ -13,15 +13,17 @@ def text_indentation(text):
     # for char in text:
     #     if char in [":", "?", "."]:
     #         text.replace(char + 1, "\n")
+    result = ""
+    i = 0
+    while i < len(text):
+            result += text[i]
+            if text[i] in ".?:":
+                result += "\n\n"  # Add exactly two new lines after each character
+                while i + 1 < len(text) and text[i + 1] == " ":  # Skip extra spaces
+                    i += 1
+            i += 1
 
-    replacements = [('.', '.\n\n'), ('?', '?\n\n'), (':', ':\n\n')]
-
-    for char, replacement in replacements:
-        if char in text:
-            text = text.replace(char, replacement)
-
-    # Strip leading and trailing spaces from each line
-    lines = text.split('\n')
-    formatted_text = '\n'.join(line.strip() for line in lines)
-    print(formatted_text)
+        # Remove any leading/trailing spaces from each line
+    result = "\n".join(line.strip() for line in result.split("\n"))
+    print(result)
 
