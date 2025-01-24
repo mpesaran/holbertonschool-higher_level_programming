@@ -15,7 +15,6 @@ Test:
     <BLANKLINE>
     I'm Ok.
     <BLANKLINE>
-    <BLANKLINE>
 
     >>> text_indentation("""How are you""")
     How are you

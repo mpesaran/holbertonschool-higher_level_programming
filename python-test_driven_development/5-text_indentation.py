@@ -25,5 +25,5 @@ def text_indentation(text):
 
         # Remove any leading/trailing spaces from each line
     result = "\n".join(line.strip() for line in result.split("\n"))
-    print(result)
+    print(result, end="")
 
