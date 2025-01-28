@@ -50,10 +50,13 @@ class Square:
                 print()
             for i in range(self.__size):
                 for k in range(self.__position[0]):
-                    if self.__position[1] > 0:
-                        print("_", end="")
-                    else:
-                        print(" ", end="")
+                    # if self.__position[1] > 0:
+                    #     print(" ", end="")
+                    # else:
+                    print(" ", end="")
                 for j in range(self.__size):
                     print("#", end="")
                 print()
+
+my_square = Square(5, (3, 2))
+my_square.my_print()
