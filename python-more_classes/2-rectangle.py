@@ -42,14 +42,12 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    def area(self):
+        """Calculates area of the rectangle object"""
+        return self.__height * self.__width
 
-try:
-    my_rectangle = Rectangle(2, 3)
-    my_rectangle.height = -4
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-try:
-    my_rectangle = Rectangle(2, 3)
-    my_rectangle.height = "4"
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def perimeter(self):
+        """Calculates perimeter of the rectangle object"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__height + self.__width)
