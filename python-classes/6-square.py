@@ -57,6 +57,3 @@ class Square:
                 for j in range(self.__size):
                     print("#", end="")
                 print()
-
-my_square = Square(5, (3, 2))
-my_square.my_print()
