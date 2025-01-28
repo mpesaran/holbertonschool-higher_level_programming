@@ -4,6 +4,14 @@ class Square:
     """square class"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
+        if (
+            not isinstance(position, tuple)
+            or len(position) != 2      
+        ):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        for num in range(2): 
+            if not isinstance(position[num], int) or position[num] < 0:
+                raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
     
     @property
@@ -23,8 +31,6 @@ class Square:
     
     @position.setter
     def position(self, value):
-        if not isinstance(value, tuple) and value[0] < 0 and value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
