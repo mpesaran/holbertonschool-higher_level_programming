@@ -3,8 +3,15 @@
 
 
 class Square:
-    """square class"""
+    """Represents a square with private size and positions attributes."""
     def __init__(self, size=0, position=(0, 0)):
+        """
+        Initialize the square with an optional size and position.
+
+        Args:
+            size (int): The size of the square (default is 0).
+            position (tuple): The position of the square (default is (0, 0)).
+        """
         self.__size = size
         if (
             not isinstance(position, tuple)
@@ -50,9 +57,6 @@ class Square:
                 print()
             for i in range(self.__size):
                 for k in range(self.__position[0]):
-                    # if self.__position[1] > 0:
-                    #     print(" ", end="")
-                    # else:
                     print(" ", end="")
                 for j in range(self.__size):
                     print("#", end="")
