@@ -41,15 +41,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-
-try:
-    my_rectangle = Rectangle(2, 3)
-    my_rectangle.height = -4
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-try:
-    my_rectangle = Rectangle(2, 3)
-    my_rectangle.height = "4"
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
