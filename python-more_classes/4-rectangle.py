@@ -62,3 +62,7 @@ class Rectangle:
             if not i == self.__height - 1:
                 result = result + "\n"
         return result
+    
+    def __repr__(self):
+        """Returns a string"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
