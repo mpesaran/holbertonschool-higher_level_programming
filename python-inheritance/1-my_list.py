@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-new class which inherits list type
+This module defines a new class which inherits list type
 """
 
 
