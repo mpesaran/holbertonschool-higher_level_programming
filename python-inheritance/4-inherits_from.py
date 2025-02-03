@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module is to have a function to check if object is inherited fr.m a 
+This module is to have a function to check if object is inherited fr.m a
 specified class
 """
 
