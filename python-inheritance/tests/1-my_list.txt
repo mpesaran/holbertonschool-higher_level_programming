@@ -24,3 +24,19 @@ Test:
 
     >>> my_list([]).print_sorted()
     []
+
+    >>> my_list([1, 2, 3]).__str__()
+    '[1, 2, 3]'
+
+    >>> my_list([1, 2]).append(3)
+    >>> my_list([1, 2, 3]).__str__()
+    '[1, 2, 3]'
+
+    >>> my_list([3, -1, 2, -4]).print_sorted()
+    [-4, -1, 2, 3]
+
+    >>> original_list = my_list([5, 2, 8, 1])
+    >>> original_list.print_sorted()
+    [1, 2, 5, 8]
+    >>> original_list.__str__()
+    '[5, 2, 8, 1]'
