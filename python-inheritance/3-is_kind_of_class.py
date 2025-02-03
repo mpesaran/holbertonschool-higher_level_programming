@@ -5,6 +5,6 @@ specified class or its subclasses
 """
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """Returns true if obje is instance of a_class otherwise false"""
     return isinstance(obj, a_class)
