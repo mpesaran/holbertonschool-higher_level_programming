@@ -41,6 +41,7 @@ Test:
     >>> original_list.__str__()
     '[5, 2, 8, 1]'
 
-    >>> my_list([1, 5]).append(3)
-    >>> my_list([1, 5, 3]).print_sorted()
+    >>> test_list = my_list([1, 5])
+    >>> test_list.append(3)
+    >>> test_list.print_sorted()
     [1, 3, 5]
