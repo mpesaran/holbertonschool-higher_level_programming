@@ -21,7 +21,7 @@ class Circle(Shape):
     """This one is a child class of abstract class Animal"""
     def __init__(self, radius):
         super().__init__()
-        self.__radius = radius
+        self.__radius = abs(radius)
 
     def perimeter(self):
         return 2 * self.__radius * math.pi
