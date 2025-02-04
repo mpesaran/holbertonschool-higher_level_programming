@@ -27,7 +27,7 @@ class Circle(Shape):
         return 2 * self.__radius * math.pi
 
     def area(self):
-        return round((self.__radius ** 2) * math.pi)
+        return (self.__radius ** 2) * math.pi
 
 
 class Rectangle(Shape):
@@ -48,5 +48,5 @@ def shape_info(sh):
     """A function to call perimeter and area methods regardless of
     objects actual class
     """
-    print(sh.area())
+    print(f"{sh.area():.1f}")
     print(sh.perimeter())
