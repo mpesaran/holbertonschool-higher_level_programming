@@ -49,4 +49,4 @@ def shape_info(sh):
     objects actual class
     """
     print(f"{sh.area():.1f}")
-    print(sh.perimeter())
+    print(f"{sh.perimeter():.1f}")
