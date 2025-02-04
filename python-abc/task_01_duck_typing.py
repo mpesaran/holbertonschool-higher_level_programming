@@ -27,7 +27,7 @@ class Circle(Shape):
         return 2 * self.__radius * math.pi
 
     def area(self):
-        return (self.__radius ** 2) * math.pi
+        return round((self.__radius ** 2) * math.pi)
 
 
 class Rectangle(Shape):
