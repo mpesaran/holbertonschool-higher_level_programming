@@ -50,6 +50,3 @@ def shape_info(sh):
     """
     print(f"{sh.area()}")
     print(f"{sh.perimeter():.1f}")
-
-c = Circle(5)
-shape_info(c)
