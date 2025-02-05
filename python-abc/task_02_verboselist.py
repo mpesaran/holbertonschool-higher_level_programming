@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """This module is to extend built-in classes to add
 or modify behavior"""
-from abc import ABC
 
 
 class VerboseList(list):
