@@ -48,5 +48,5 @@ def shape_info(sh):
     """A function to call perimeter and area methods regardless of
     objects actual class
     """
-    print(f"{sh.area()}")
-    print(f"{sh.perimeter():.1f}")
+    print(f"Area: {sh.area()}")
+    print(f"Perimeter: {sh.perimeter()}")
