@@ -1,0 +1,1 @@
+This directory is to practice write and read from a file in Python.
