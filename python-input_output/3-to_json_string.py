@@ -1,4 +1,4 @@
-#!/sur/bin/pyhton3
+#!/usr/bin/pyhton3
 """This module is about convert to JSON string"""
 import json
 
