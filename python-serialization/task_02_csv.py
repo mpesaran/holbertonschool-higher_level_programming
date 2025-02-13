@@ -14,3 +14,5 @@ def convert_csv_to_json(csv_filename, json_fielename= 'data.json'):
             return True
     except FileNotFoundError:
         return False
+
+convert_csv_to_json('data.csv')
