@@ -1,0 +1,1 @@
+This directory is to practice restful api using flask and python libraries
