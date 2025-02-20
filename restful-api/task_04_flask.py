@@ -36,7 +36,7 @@ def get_user(username):
     user = users.get(username)
     if user:
         return jsonify(user), 200
-    return "User not Found", 400
+    return jsonify({'error': 'User not Found'}), 400
 
 
 @app.route("/add_user", methods=['POST'])
@@ -51,7 +51,7 @@ def add_new_user():
         'age': data['age'],
         'city': data['city']
     }
-    return jsonify({'message': 'User added', 'user': users[username]}), 200
+    return jsonify({'message': 'User added', 'user': data}), 200
 
 
 if __name__ == "__main__":
