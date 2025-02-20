@@ -29,10 +29,7 @@ class SimpleRequestHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps({
-                'error': 'Not Found',
-                'message': 'Endpoint not found'
-                }).encode('utf-8'))
+            self.wfile.write(b"Endpoint not found")
 
 
 def start_server():
