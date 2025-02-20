@@ -32,7 +32,11 @@ def get_user(username):
     """Fetches specific user from user dictionary"""
     user = users.get(username)
     if user:
-        return jsonify(user), 200
+        user_complete = {
+            "username": username,
+            **user
+        }
+        return jsonify(user_complete), 200
     return jsonify({'error': 'User not found'}), 400
 
 
