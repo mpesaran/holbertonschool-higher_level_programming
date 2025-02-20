@@ -48,7 +48,7 @@ def add_new_user():
         'age': data['age'],
         'city': data['city']
     }
-    return jsonify({'message': 'User added', 'user': data}), 200
+    return jsonify({'message': 'User added', 'user': data}), 201
 
 
 if __name__ == "__main__":
