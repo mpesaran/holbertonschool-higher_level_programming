@@ -18,12 +18,15 @@ def verify_password(username, password):
     if username in users and \
             check_password_hash(users[username]["password"], password):
         return username
-    return None
+    return 
 
 @app.route("/basic-protected", methods=['GET'])
 @auth.login_required
 def index():
-    return jsonify(message="Basic Auth: Access Granted")
+    return "Basic Auth: Access Granted"
+# @auth.error_handler
+# def auth_error():
+#     return jsonify({"error": "Unauthorized access"}), 401
 
 @app.route("/login", methods=['POST'])
 def login():
@@ -72,4 +75,4 @@ def handle_needs_fresh_token_error(err):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
