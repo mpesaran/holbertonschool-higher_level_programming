@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -12,8 +13,8 @@ auth = HTTPBasicAuth()
 jwt = JWTManager(app)
 
 users = {
-    "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
-    "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
+    # "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
+    # "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
 }
 
 @auth.verify_password
@@ -72,6 +73,6 @@ def handle_revoked_token_error(err):
 def handle_needs_fresh_token_error(err):
     return jsonify({"error": "Fresh token required"}), 401
 
-    
+
 if __name__ == '__main__':
-    app.run(host='localhost', port='5000', debug=True)
+    app.run()
