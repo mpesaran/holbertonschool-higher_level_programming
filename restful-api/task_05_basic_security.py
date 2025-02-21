@@ -1,16 +1,19 @@
 #!/usr/bin/python3
 from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from flask_jwt_extended.exceptions import NoAuthorizationError, InvalidHeaderError
+
 users = {
-    # "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
-    # "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
+    "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
+    "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
 }
 
 app = Flask(__name__)
-auth = HTTPBasicAuth()
+app.config['SECRET_KEY'] = 'your_secret_key'
 app.config["JWT_SECRET_KEY"] = "super-secret" 
+auth = HTTPBasicAuth()
 jwt = JWTManager(app)
 
 @auth.verify_password
