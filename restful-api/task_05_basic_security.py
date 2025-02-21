@@ -8,8 +8,8 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 # from flask_jwt_extended.exceptions import Decode
 
 users = {
-    "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
-    "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
+    # "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
+    # "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
 }
 
 app = Flask(__name__)
