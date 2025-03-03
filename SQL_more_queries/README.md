@@ -1,0 +1,1 @@
+This directory is to practice complex scripts of the SQL.
