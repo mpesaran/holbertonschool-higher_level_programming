@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+State class that maps to the 'states' table in MySQL.
+The table should have an auto-generated id as primary key
+and a name field for the state name.
+"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
