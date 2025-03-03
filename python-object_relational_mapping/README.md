@@ -1,0 +1,1 @@
+This directory is to practice Object Relational Mapping (ORM). we will working with MySQLdb and SQLAlchemy.
