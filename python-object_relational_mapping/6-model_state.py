@@ -8,4 +8,6 @@ from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    # checks base's metadata(which contains all mapped classess)
+    # and creates table in database
     Base.metadata.create_all(engine)
