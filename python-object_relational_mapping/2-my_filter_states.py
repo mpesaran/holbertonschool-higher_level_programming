@@ -31,7 +31,7 @@ def filter_states():
     cursor = db.cursor()
     cursor.execute("SELECT id, name\
                    FROM states\
-                   WHERE name= '{}'\
+                   WHERE BINARY name= '{}'\
                    ORDER BY id".format(state_name)
                    )
     results = cursor.fetchall()
