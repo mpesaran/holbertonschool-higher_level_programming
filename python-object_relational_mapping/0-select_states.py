@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+"""
+This script uses the MySQLdb module to connect to a MySQL database
+and lists all states from the 'states' table in the specified database.
+The results are sorted in ascending order by the state ID and displayed
+as tuples.
+"""
+
 import sys
 import MySQLdb
-
-"""
-This script connects to a MySQL database and lists all states from the
-'states' table in the specified database. The results are sorted in
-ascending order by the state ID and displayed as tuples.
-"""
 
 
 def list_states():
