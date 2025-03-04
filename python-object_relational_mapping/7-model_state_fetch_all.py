@@ -4,7 +4,7 @@ A script that lists all State objects from the database hbtn_0e_6_usa.
 
 This script connects to a MySQL database using SQLAlchemy, retrieves all the
 State objects from the `states` table, and prints them in ascending order by
-the state's ID. 
+the state's ID.
 """
 
 import sys
