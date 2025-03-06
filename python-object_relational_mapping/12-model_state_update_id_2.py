@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Updates a record's name in database 
+Updates a record's name in database
 """
 
 
@@ -18,6 +18,9 @@ if __name__ == "__main__":
     session = Session(engine)
 
     state_to_update = session.query(State).filter_by(id=2).first()
+    # session.query(State).filter_by(id=2).update({
+    #       "name": "New Mexico"
+    #        }) alternative way
 
     if state_to_update:
         state_to_update.name = "New Mexico"
