@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import json
 import csv
-
+import sqlite3
 
 app = Flask(__name__)
 
@@ -23,6 +23,23 @@ def read_csv_file():
         return products
     except FileNotFoundError:
         return []
+
+def read_from_sql(id=None):
+    conn = sqlite3.connect('products.db')
+    cursor = conn.cursor()
+
+    if id:
+        cursor.execute("SELECT * FROM Products WHERE id = ?", (id,))
+    else:
+        cursor.execute("SELECT * FROM Products")
+
+    rows = cursor.fetchall()
+    conn.close()
+
+    products = [{"id": row[0], "name": row[1], "category":row[2], "price": row[3]} for row in rows]
+
+    return products
+
 
 
 @app.route('/')
@@ -56,6 +73,8 @@ def products():
         products = read_json_file()
     elif source == 'csv':
         products = read_csv_file()
+    elif source == 'sql':
+        products = read_from_sql()
     else:
         return {"error": "Wrong source"}, 400
     
