@@ -48,7 +48,7 @@ def items():
 def products():
     source = request.args.get('source')
     if not source:
-        return {"error": "Wrong source"}, 400
+        return "Wrong source", 400
 
     id = request.args.get('id', type=int)
 
