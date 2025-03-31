@@ -65,7 +65,7 @@ def items():
 def products():
     source = request.args.get('source')
     if not source:
-        return {"error": "source is a required parameter"}, 400
+        return "source is a required parameter"
 
     id = request.args.get('id', type=int)
 
@@ -76,7 +76,7 @@ def products():
     elif source == 'sql':
         products = read_from_sql()
     else:
-        return {"error": "Wrong source"}, 400
+        return "Wrong source"
     
     if id:
         products = [product for product in products if product['id'] == id]
