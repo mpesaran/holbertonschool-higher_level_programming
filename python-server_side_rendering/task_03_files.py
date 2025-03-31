@@ -57,7 +57,7 @@ def products():
     elif source == 'csv':
         products = read_csv_file()
     else:
-        return render_template('product_display.html', error="wrong source")
+        return "Wrong source"
     
     if id:
         products = [product for product in products if product['id'] == id]
