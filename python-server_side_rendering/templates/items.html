@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Items List</title>
+    </head>
+    <body>
+            {% if items %}
+                <ul>
+                    {% for item in items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>There is no item to display</p>
+            {% endif %}
+    </body>
+</html>
