@@ -1,3 +1,6 @@
+import os
+
+
 def generate_invitations(template, attendees):
     """
     Generates personalized invitation files from a template and
@@ -43,13 +46,23 @@ def generate_invitations(template, attendees):
 
     for i, attendee in enumerate(attendees, 1):
         try:
-            invitation = template.format(
-                name=attendee.get("name", "N/A"),
-                event_title=attendee.get("event_title", "N/A"),
-                event_date=attendee.get("event_date", "N/A"),
-                event_location=attendee.get("event_location", "N/A")
-            )
-            with open(f"invitation_{i}.txt", "w") as file:
+            name = attendee.get("name", "N/A")
+            event_title = attendee.get("event_title", "N/A")
+            event_date = attendee.get("event_date", "N/A")
+            event_location = attendee.get("event_location", "N/A")
+
+            invitation = template.replace("{name}", name) \
+                                 .replace("{event_title}", event_title) \
+                                 .replace("{event_date}", event_date) \
+                                 .replace("{event_location}", event_location)
+            filename = f"invitation_{i}.txt"
+
+            if os.path.exists(filename):
+                print(f"Skipping {filename}: File already exists.")
+                continue
+
+            with open(filename, "w") as file:
                 file.write(invitation)
+
         except KeyError as e:
             print(f"Error: Missing key in attendee data - {e}")
