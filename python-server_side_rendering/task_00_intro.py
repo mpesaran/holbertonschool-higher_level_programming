@@ -55,7 +55,7 @@ def generate_invitations(template, attendees):
                                  .replace("{event_title}", event_title) \
                                  .replace("{event_date}", event_date) \
                                  .replace("{event_location}", event_location)
-            filename = f"invitation_{i}.txt"
+            filename = f"output_{i}.txt"
 
             if os.path.exists(filename):
                 print(f"Skipping {filename}: File already exists.")
