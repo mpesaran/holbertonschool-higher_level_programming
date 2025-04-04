@@ -57,7 +57,7 @@ def products():
     elif source == 'csv':
         products = read_csv_file()
     else:
-        return {"error": "Wrong source"}, 400
+        return {"error": "Wrong source"}, 200
     
     if id:
         products = [product for product in products if product['id'] == id]
