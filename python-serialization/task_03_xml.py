@@ -21,7 +21,7 @@ def deserialize_from_xml(filename):
         # Construct the dictionary
         data = {}
         for child in root:
-            data[child.tag] = child.text.strip() if child.text else ""  # Keep all values as strings
+            data[child.tag] = child.text.strip() if child.text else ""
 
         return data
     except ET.ParseError:
