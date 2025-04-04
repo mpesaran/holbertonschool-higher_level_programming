@@ -48,7 +48,7 @@ def items():
 def products():
     source = request.args.get('source')
     if not source:
-        return {"error": "source is a required parameter"}, 400
+        return {"error": "source is a required parameter"}, 200
 
     id = request.args.get('id', type=int)
 
